@@ -10,6 +10,7 @@
     fd # better `find`
     git-crypt
     gnupg
+    helix
     httpie # cool http client
     hyperfine # benchmarking tool
     jq
