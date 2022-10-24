@@ -70,6 +70,7 @@
     tf = "terraform";
     hms = "home-manager switch";
     szsh = "source ~/.zshrc";
+    stree = "/Application/Sourcetree.app/Contents/Resources/stree";
     reload = "home-manager switch && source ~/.zshrc";
     vim = "nvim";
     vi = "nvim";
