@@ -70,6 +70,8 @@
       "android-studio"
       "authy"
       "eloston-chromium"
+      "beekeeper-studio"
+      "discord"
       "docker" # remove for Mac with Apple silicon
       "font-fira-code-nerd-font"
       "font-fira-mono-nerd-font"
@@ -81,10 +83,10 @@
       "slack"
       "sourcetree"
       "spotify"
+      "sublime-merge"
       "transmission"
       "vlc"
       "vscodium"
-      "visual-studio-code"
       "whatsapp"
       "zulu11"
     ];
