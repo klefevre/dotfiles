@@ -3,8 +3,8 @@
    nix = {
     package = pkgs.nix;
     extraOptions = ''
-      system = x86_64-darwin
-      extra-platforms = aarch64-darwin x86_64-darwin # But we use rosetta too
+      system = aarch64-darwin
+      extra-platforms = x86_64-darwin 
       experimental-features = nix-command flakes
       build-users-group = nixbld
     '';

@@ -14,8 +14,8 @@
   };
 
   outputs = { self, nixpkgs, darwin, home-manager, ... }@inputs: {
-    darwinConfigurations."KL-MBA" = darwin.lib.darwinSystem {
-        system = "x86_64-darwin";
+    darwinConfigurations."kl-mbp" = darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
         modules = [
           ./configuration.nix
           home-manager.darwinModules.home-manager
