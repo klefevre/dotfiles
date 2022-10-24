@@ -2,6 +2,8 @@
 {
   home.stateVersion = "22.05";
 
+  manual.manpages.enable = false;
+
   home.packages = with pkgs; [
     bat # better `cat`
     bottom # better `top`
