@@ -70,7 +70,7 @@
     tf = "terraform";
     hms = "home-manager switch";
     szsh = "source ~/.zshrc";
-    stree = "/Application/Sourcetree.app/Contents/Resources/stree";
+    stree = "/Applications/Sourcetree.app/Contents/Resources/stree";
     reload = "home-manager switch && source ~/.zshrc";
     vim = "nvim";
     vi = "nvim";
@@ -92,6 +92,12 @@
     ignores = [
       "*~"
       ".DS_Store"
+    ];
+    includes = [
+      {
+        path = "~/.gitconfig-work";
+        condition = "gitdir:~/Work/Cryptio/";
+      }
     ];
     extraConfig = {
       init.defaultBranch = "main";
@@ -147,23 +153,25 @@
     initExtra = ''
       # Fix zplug not doing its job
       export PATH="$ZPLUG_HOME/bin:$PATH";
+      export PATH="$HOME/.cargo/bin:$PATH";
 
       # Android stuff
-      export PATH=$PATH:$ANDROID_HOME/tools 
+      export PATH=$PATH:$ANDROID_HOME/tools
       export PATH=$PATH:$ANDROID_HOME/tools/bin
       export PATH=$PATH/:$ANDROID_HOME/platform-tools
 
-      # Fix arrow up autosuggestion in history 
+      # Fix arrow up autosuggestion in history
       bindkey '^[[A' up-line-or-search
       bindkey '^[[B' down-line-or-search
 
-      # Make autosuggestion navigable 
+      # Make autosuggestion navigable
       zstyle ':completion:*' menu select
 
       # Setup colors from LS_COLORS env var (à la OhMyZsh)
       zstyle ':completion:*' list-colors ''${(s.:.)LS_COLORS}
 
       # Start stuff
+      eval "$(/opt/homebrew/bin/brew shellenv)"
       eval "$(starship init zsh)"
       eval "$(zoxide init zsh)"
       eval "$(thefuck --alias)"

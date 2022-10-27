@@ -64,31 +64,31 @@
       "homebrew/cask-fonts"
     ];
     casks = [
-      "1password"
       "alfred"
       "amethyst"
       "android-studio"
       "authy"
+      "brave-browser"
       "eloston-chromium"
-      "beekeeper-studio"
+      "datagrip"
       "discord"
       "docker" # remove for Mac with Apple silicon
       "font-fira-code-nerd-font"
       "font-fira-mono-nerd-font"
-      "firefox"
+      "font-meslo-lg-nerd-font"
       "iterm2"
       "moom"
+      "obsidian"
       "parallels"
       "protonvpn"
       "slack"
       "sourcetree"
       "spotify"
-      "sublime-merge"
+      "telegram"
       "transmission"
       "vlc"
       "vscodium"
       "whatsapp"
-      "zulu11"
     ];
     masApps = {
       Xcode = 497799835;
