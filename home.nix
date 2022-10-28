@@ -81,7 +81,7 @@
   programs.git = {
     enable = true;
     userEmail = "1300874+klefevre@users.noreply.github.com";
-    userName = "Kevin Lefèvre";
+    userName = "Kévin Lefèvre";
     delta = {
       enable = true;
       options = {
@@ -93,10 +93,15 @@
       "*~"
       ".DS_Store"
     ];
+    aliases = {
+
+    };
     includes = [
       {
-        path = "~/.gitconfig-work";
-        condition = "gitdir:~/Work/Cryptio/";
+        condition = "gitdir:~/Work/Cryptio/**";
+        contents = {
+            user.email = "12807737-klefevre1@users.noreply.gitlab.com";
+        };
       }
     ];
     extraConfig = {
@@ -104,6 +109,10 @@
       pull.rebase = true;
       pull.ff = "only";
       pager.diff = true;
+      url = {
+          "ssh://git@github.com/".insteadOf = "https://github.com";
+          "ssh://git@gitlab.com/".insteadOf = "https://gitlab.com";
+      };
     };
   };
 
