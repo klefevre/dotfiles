@@ -1,46 +1,49 @@
-{ pkgs, lib, config, home-manager, nix-darwin, inputs, ... }:
+{ config, pkgs, lib, home-manager, ... }:
 {
-  home.stateVersion = "22.05";
-
-  manual.manpages.enable = false;
-
   home.packages = with pkgs; [
-    bat # better `cat`
-    bottom # better `top`
+    # Fundamental
     direnv
-    du-dust # better `du`
-    fd # better `find`
     git-crypt
     gnupg
     helix
     httpie # cool http client
-    hyperfine # benchmarking tool
     jq
-    lsd # better `ls`
-    neofetch # fancy system and hardware info
     neovim
     nushell
-    ran # quick local webserver (`-r [folder]`)
+    ran # quick local webserver
     rename
-    ripgrep # better `grep`
-    starship # better prompt
-    tealdeer # fast tldr
-    thefuck
     tmux
     wget
+
+    # Modern rust tools
+    bat # better `cat`
+    bottom # better `top`
+    du-dust # better `du`
+    fd # better `find`
+    hyperfine # benchmarking tool
+    lsd # better `ls`
+    ripgrep # better `grep`
+    tealdeer # fast tldr
     zoxide # better `z`
 
+    # Rust dev
     rustup
 
+    # Node dev
     nodejs
     yarn
 
+    # DevOps stuff
     k9s
-    kubectl
 
-    # Nix VSC
+    # Nix stuff
     rnix-lsp
     nixpkgs-fmt
+
+    # Funny
+    neofetch # fancy system and hardware info
+    mdcat # Fancy cat for markdown
+    thefuck
 
   ] ++ lib.optionals stdenv.isDarwin [
     coreutils # provides `dd` with --status=progress
@@ -71,47 +74,16 @@
     hms = "home-manager switch";
     szsh = "source ~/.zshrc";
     stree = "/Applications/Sourcetree.app/Contents/Resources/stree";
-    reload = "home-manager switch && source ~/.zshrc";
+    reload = "darwin-rebuild -I \"darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix\" switch --flake \"$HOME/.config/nixpkgs\"";
     vim = "nvim";
     vi = "nvim";
   };
 
-  programs.home-manager.enable = true;
-
-  programs.git = {
+  programs.starship = {
     enable = true;
-    userEmail = "1300874+klefevre@users.noreply.github.com";
-    userName = "Kévin Lefèvre";
-    delta = {
-      enable = true;
-      options = {
-        line-numbers = true;
-        side-by-side = true;
-      };
-    };
-    ignores = [
-      "*~"
-      ".DS_Store"
-    ];
-    aliases = {
-
-    };
-    includes = [
-      {
-        condition = "gitdir:~/Work/Cryptio/**";
-        contents = {
-            user.email = "12807737-klefevre1@users.noreply.gitlab.com";
-        };
-      }
-    ];
-    extraConfig = {
-      init.defaultBranch = "main";
-      pull.rebase = true;
-      pull.ff = "only";
-      pager.diff = true;
-      url = {
-          "ssh://git@github.com/".insteadOf = "https://github.com";
-          "ssh://git@gitlab.com/".insteadOf = "https://gitlab.com";
+    settings = {
+      time = {
+        disabled = false;
       };
     };
   };
@@ -119,6 +91,10 @@
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
+  };
+
+  programs.fish = {
+    enable = true;
   };
 
   programs.zsh = {
