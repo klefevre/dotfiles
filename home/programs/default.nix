@@ -1,7 +1,10 @@
-{ pkgs, lib, config, home-manager, nix-darwin, inputs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./git.nix
-    ./shell.nix
+    ./tmux.nix
+    ./starship.nix
+    ./packages.nix
+    ./others.nix
   ];
 }

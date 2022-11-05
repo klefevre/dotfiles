@@ -1,108 +1,12 @@
-{ config, pkgs, lib, home-manager, ... }:
+{ pkgs, ... }:
 {
-  home.packages = with pkgs; [
-    # Fundamental
-    direnv
-    git-crypt
-    gnupg
-    helix
-    httpie # cool http client
-    jq
-    neovim
-    nushell
-    ran # quick local webserver
-    rename
-    tmux
-    wget
-
-    # Modern rust tools
-    bat # better `cat`
-    bottom # better `top`
-    du-dust # better `du`
-    fd # better `find`
-    hyperfine # benchmarking tool
-    lsd # better `ls`
-    ripgrep # better `grep`
-    tealdeer # fast tldr
-    zoxide # better `z`
-
-    # Rust dev
-    rustup
-
-    # Node dev
-    nodejs
-    yarn
-
-    # DevOps stuff
-    k9s
-
-    # Nix stuff
-    rnix-lsp
-    nixpkgs-fmt
-
-    # Funny
-    neofetch # fancy system and hardware info
-    mdcat # Fancy cat for markdown
-    thefuck
-
-  ] ++ lib.optionals stdenv.isDarwin [
-    coreutils # provides `dd` with --status=progress
-
-  ] ++ lib.optionals stdenv.isLinux [
-    iputils # provides `ping`, `ifconfig`, ...
-    libuuid # `uuidgen` (already pre-installed on mac)
-  ];
-
-  home.shellAliases = {
-    ".." = "cd ..";
-    "..." = "cd ../..";
-    "...." = "cd ../../..";
-    "....." = "cd ../../../..";
-    "......" = "cd ../../../../..";
-    cat = "bat";
-    ls = "lsd";
-    l = "ls -l";
-    la = "ls -a";
-    ll = "ls -l";
-    lla = "ls -la";
-    tree = "ls --tree";
-    k = "kubectl";
-    dc = "docker-compose";
-    md = "mdcat";
-    mk = "minikube";
-    tf = "terraform";
-    hms = "home-manager switch";
-    szsh = "source ~/.zshrc";
-    stree = "/Applications/Sourcetree.app/Contents/Resources/stree";
-    reload = "darwin-rebuild -I \"darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix\" switch --flake \"$HOME/.config/nixpkgs\"";
-    vim = "nvim";
-    vi = "nvim";
-  };
-
-  programs.starship = {
-    enable = true;
-    settings = {
-      time = {
-        disabled = false;
-      };
-    };
-  };
-
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.fish = {
-    enable = true;
-  };
-
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     enableSyntaxHighlighting = true;
     history.extended = true;
     dotDir = ".config/zsh";
+    autocd = true;
 
     zplug = {
       enable = true;
@@ -138,6 +42,8 @@
     initExtra = ''
       # Fix zplug not doing its job
       export PATH="$ZPLUG_HOME/bin:$PATH";
+
+      # Rustup stuff
       export PATH="$HOME/.cargo/bin:$PATH";
 
       # Android stuff
@@ -157,10 +63,7 @@
 
       # Start stuff
       eval "$(/opt/homebrew/bin/brew shellenv)"
-      eval "$(starship init zsh)"
-      eval "$(zoxide init zsh)"
       eval "$(thefuck --alias)"
-      eval "$(direnv hook zsh)"
     '';
   };
 }

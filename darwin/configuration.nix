@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, config, lib, ... }:
 {
   imports = [
     ./homebrew.nix
@@ -16,9 +16,10 @@
     '';
   };
 
-  environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
-
+  environment.darwinConfig = "/Users/klefevre/.config/nixpkgs/darwin/configuration.nix";
   environment.shells = [ pkgs.zsh ];
+  environment.pathsToLink = [ "/share/zsh" ];
+
   programs.zsh.enable = true;
 
   # Used for backwards compatibility, please read the changelog before changing.
