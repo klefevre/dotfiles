@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -23,9 +23,20 @@
           name = "plugins/git";
           tags = [ from:oh-my-zsh ];
         }
+        {
+          name = "plugins/kubectl";
+          tags = [ from:oh-my-zsh ];
+        }
+        {
+          name = "plugins/docker";
+          tags = [ from:oh-my-zsh ];
+        }
+        {
+          name = "plugins/docker-compose";
+          tags = [ from:oh-my-zsh ];
+        }
       ];
-      # zplugHome = "${config.home.homeDirectory}/.config/zplug";
-      zplugHome = "/Users/klefevre/.zplug";
+      # zplugHome = "${config.home.homeDirectory}/.config/zplug"; FIXME
     };
 
     localVariables = {
@@ -44,9 +55,6 @@
     };
 
     initExtra = ''
-      # Fix zplug not doing its job
-      export PATH="$ZPLUG_HOME/bin:$PATH";
-
       # Rustup stuff
       export PATH="$HOME/.cargo/bin:$PATH";
 

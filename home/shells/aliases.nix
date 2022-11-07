@@ -13,15 +13,11 @@
     ll = "ls -l";
     lla = "ls -la";
     tree = "ls --tree";
-    k = "kubectl";
-    dc = "docker-compose";
     md = "mdcat";
     mk = "minikube";
-    tf = "terraform";
-    hms = "home-manager switch";
     szsh = "source ~/.zshrc";
     stree = "/Applications/Sourcetree.app/Contents/Resources/stree";
-    reload = "darwin-rebuild -I \"darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix\" switch --flake \"$HOME/.config/nixpkgs\"";
+    reload = "pushd $HOME/.config/nixpkgs && darwin-rebuild -I \"darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix\" switch --flake \"$HOME/.config/nixpkgs\" && popd";
     vim = "nvim";
     vi = "nvim";
   };
