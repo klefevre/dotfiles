@@ -15,7 +15,8 @@
 
   programs.gpg = {
     enable = true;
-    homedir = "${config.home.homeDirectory}.config/gnupg";
+    # homedir = "${config.home.homeDirectory}/.config/gnupg"; FIXME
+    homedir = "/Users/klefevre/.config/gnupg";
   };
 
   programs.tealdeer = {
