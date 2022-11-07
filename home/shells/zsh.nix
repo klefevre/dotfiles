@@ -37,6 +37,7 @@
         }
       ];
       # zplugHome = "${config.home.homeDirectory}/.config/zplug"; FIXME
+      zplugHome = "/Users/klefevre/.zplug";
     };
 
     localVariables = {
