@@ -17,10 +17,10 @@
   };
 
   environment.darwinConfig = "/Users/klefevre/.config/nixpkgs/darwin/configuration.nix";
-  environment.shells = [ pkgs.zsh ];
-  environment.pathsToLink = [ "/share/zsh" ];
+  environment.shells = [ pkgs.fish ];
+  environment.pathsToLink = [ "/share/fish" ];
 
-  programs.zsh.enable = true;
+  programs.fish.enable = true;
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog

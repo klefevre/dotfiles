@@ -20,8 +20,8 @@
       pull.ff = "only";
       pager.diff = true;
       url = {
-          "ssh://git@github.com/".insteadOf = "https://github.com/";
-          "ssh://git@gitlab.com/".insteadOf = "https://gitlab.com/";
+        "ssh://git@github.com/".insteadOf = "https://github.com/";
+        "ssh://git@gitlab.com/".insteadOf = "https://gitlab.com/";
       };
     };
 
@@ -29,8 +29,8 @@
       {
         condition = "gitdir:~/Work/Cryptio/**";
         contents = {
-            user.name = "Kévin Lefèvre";
-            user.email = "12807737-klefevre1@users.noreply.gitlab.com";
+          user.name = "Kévin Lefèvre";
+          user.email = "12807737-klefevre1@users.noreply.gitlab.com";
         };
       }
     ];

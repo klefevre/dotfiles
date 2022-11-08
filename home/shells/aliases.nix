@@ -1,11 +1,10 @@
 { pkgs, ... }:
 {
   home.shellAliases = {
-    ".." = "cd ..";
-    "..." = "cd ../..";
-    "...." = "cd ../../..";
-    "....." = "cd ../../../..";
-    "......" = "cd ../../../../..";
+    "..." = "../..";
+    "...." = "../../..";
+    "....." = "../../../..";
+    "......" = "../../../../..";
     cat = "bat";
     ls = "lsd";
     l = "ls -l";
@@ -15,7 +14,6 @@
     tree = "ls --tree";
     md = "mdcat";
     mk = "minikube";
-    szsh = "source ~/.zshrc";
     stree = "/Applications/Sourcetree.app/Contents/Resources/stree";
     reload = "pushd $HOME/.config/nixpkgs && darwin-rebuild switch --flake . && popd";
     vim = "nvim";

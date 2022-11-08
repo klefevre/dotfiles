@@ -10,7 +10,8 @@
 
   programs.direnv = {
     enable = true;
-    enableZshIntegration = true;
+    # enableZshIntegration = true;
+    # enableFishIntegration = true;
   };
 
   programs.gpg = {
@@ -29,11 +30,13 @@
 
   programs.fzf = {
     enable = true;
-    enableZshIntegration = true;
+    # enableZshIntegration = true;
+    enableFishIntegration = true;
   };
 
   programs.zoxide = {
     enable = true;
-    enableZshIntegration = true;
+    # enableZshIntegration = true;
+    enableFishIntegration = true;
   };
 }
