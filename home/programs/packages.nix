@@ -15,7 +15,9 @@
     fd # better `find`
     hyperfine # benchmarking tool
     lsd # better `ls`
+    procs # better `ps`
     ripgrep # better `grep`
+    xsv
 
     # Rust dev
     rustup
@@ -26,6 +28,7 @@
 
     # DevOps stuff
     k9s
+    awscli2
 
     # Nix stuff
     rnix-lsp
@@ -35,6 +38,8 @@
     neofetch # fancy system and hardware info
     mdcat # Fancy cat for markdown
     thefuck
+    fortune
+    cowsay
 
   ] ++ lib.optionals stdenv.isDarwin [
     coreutils # provides `dd` with --status=progress

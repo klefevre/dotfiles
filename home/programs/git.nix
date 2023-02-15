@@ -16,6 +16,9 @@
 
     extraConfig = {
       init.defaultBranch = "main";
+      core = {
+        editor = "hx";
+      };
       pull.rebase = true;
       pull.ff = "only";
       pager.diff = true;
@@ -23,6 +26,7 @@
         "ssh://git@github.com/".insteadOf = "https://github.com/";
         "ssh://git@gitlab.com/".insteadOf = "https://gitlab.com/";
       };
+      push.autoSetupRemote = true;
     };
 
     includes = [
@@ -30,7 +34,7 @@
         condition = "gitdir:~/Work/Cryptio/**";
         contents = {
           user.name = "Kévin Lefèvre";
-          user.email = "12807737-klefevre1@users.noreply.gitlab.com";
+          user.email = "12807736-klefevre1@users.noreply.gitlab.com";
         };
       }
     ];

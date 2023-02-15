@@ -15,6 +15,7 @@
     md = "mdcat";
     mk = "minikube";
     stree = "/Applications/Sourcetree.app/Contents/Resources/stree";
+    codium = "/Applications/VSCodium.app/Contents/Resources/app/bin/codium";
     reload = "pushd $HOME/.config/nixpkgs && darwin-rebuild switch --flake . && popd";
     vim = "nvim";
     vi = "nvim";

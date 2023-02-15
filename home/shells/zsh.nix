@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
 {
   programs.zsh = {
-    enable = true;
+    enable = false;
     enableCompletion = true;
     enableSyntaxHighlighting = true;
     history.extended = true;
