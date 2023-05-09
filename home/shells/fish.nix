@@ -3,8 +3,14 @@
   programs.fish = {
     enable = true;
     shellInit = ''
+      set -gx ANDROID_HOME $HOME/Library/Android/sdk
+      set -gx EDITOR hx
+
       fish_add_path ~/.cargo/bin
       fish_add_path /opt/homebrew/bin
+
+      fish_add_path $ANDROID_HOME/emulator
+      fish_add_path $ANDROID_HOME/platform-tools
 
       function fish_greeting
         fortune -a | cowsay

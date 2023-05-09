@@ -22,10 +22,6 @@
     # Rust dev
     rustup
 
-    # Node dev
-    nodejs
-    yarn
-
     # DevOps stuff
     k9s
     awscli2
