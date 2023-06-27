@@ -14,7 +14,7 @@
     du-dust # better `du`
     fd # better `find`
     hyperfine # benchmarking tool
-    lsd # better `ls`
+    exa # better `ls` (previously lsd)
     procs # better `ps`
     ripgrep # better `grep`
     xsv
