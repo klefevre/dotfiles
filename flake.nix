@@ -23,6 +23,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.klefevre = import ./home;
+            users.users.klefevre.home = "/Users/klefevre";
           }
         ];
       };
