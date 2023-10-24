@@ -1,4 +1,4 @@
-{ pkgs, config, lib, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     ./homebrew.nix
@@ -6,26 +6,28 @@
     ./system.nix
   ];
 
+  nixpkgs.hostPlatform = "aarch64-darwin";
+
   nix = {
-    package = pkgs.nix;
-    extraOptions = ''
-      system = aarch64-darwin
-      extra-platforms = aarch64-darwin x86_64-darwin
-      experimental-features = nix-command flakes
-      build-users-group = nixbld
-    '';
+    settings.experimental-features = "nix-command flakes";
+    # package = pkgs.nix;
   };
 
-  environment.darwinConfig = "/Users/klefevre/.config/nixpkgs/darwin/configuration.nix";
-  environment.shells = [ pkgs.fish ];
-  environment.pathsToLink = [ "/share/fish" ];
-
+  programs.zsh.enable = true;
   programs.fish.enable = true;
 
-  # Used for backwards compatibility, please read the changelog before changing.
-  # $ darwin-rebuild changelog
-  system.stateVersion = 4;
+  environment = {
+    shells = [ pkgs.fish pkgs.zsh ];
+    loginShell = pkgs.fish;
+    systemPackages = [ pkgs.coreutils ];
+  };
 
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
+  system = {
+    # configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
+    stateVersion = 4;
+  };
+
+  services = {
+    nix-daemon.enable = true;
+  };
 }

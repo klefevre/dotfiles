@@ -8,23 +8,35 @@
     rename
     wget
 
-    # Modern rust tools
+    # Modern tools
     bat # better `cat`
     bottom # better `top`
     du-dust # better `du`
+    fend # brbitrary-precision unit-aware calculator
     fd # better `find`
+    fx # json viewer with folding feature
     hyperfine # benchmarking tool
     eza # better `ls` (previously lsd)
     procs # better `ps`
     ripgrep # better `grep`
     xsv
 
+    # Networking stuff
+    ipcalc
+    iperf
+    nmap
+
     # Rust dev
     rustup
 
     # DevOps stuff
-    k9s
     awscli2
+    k9s
+    kubectx
+    kubernetes-helm
+    kubeseal
+    pg_activity
+    pulumi
 
     # Nix stuff
     rnix-lsp

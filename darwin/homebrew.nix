@@ -10,20 +10,24 @@
       "homebrew/cask-fonts"
     ];
     casks = [
+      "alacritty"
       "alfred"
       "amethyst"
-      "android-studio"
       "authy"
       "brave-browser"
       "eloston-chromium"
       "datagrip"
       "discord"
-      "docker" # remove for Mac with Apple silicon
+      "docker"
+      "element"
       "font-fira-code-nerd-font"
       "font-fira-mono-nerd-font"
       "font-meslo-lg-nerd-font"
+      "freetube"
+      "hammerspoon"
       "iterm2"
       "moom"
+      "nightfall"
       "obsidian"
       "parallels"
       "protonvpn"
@@ -32,8 +36,9 @@
       "spotify"
       "telegram"
       "transmission"
+      "utm"
       "vlc"
-      "vscodium"
+      "visual-studio-code"
       "whatsapp"
     ];
     masApps = {
