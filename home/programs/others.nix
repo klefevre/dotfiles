@@ -1,5 +1,10 @@
 { pkgs, lib, home-manager, config, ... }:
 {
+  programs.atuin = {
+    enable = true;
+    # enableFishIntegration = true;
+  };
+
   programs.helix = {
     enable = true;
   };
@@ -34,9 +39,9 @@
     enableFishIntegration = true;
   };
 
-  programs.zoxide = {
-    enable = true;
-    # enableZshIntegration = true;
-    enableFishIntegration = true;
-  };
+  # programs.zoxide = {
+  #   enable = true;
+  #   # enableZshIntegration = true;
+  #   enableFishIntegration = true;
+  # };
 }
