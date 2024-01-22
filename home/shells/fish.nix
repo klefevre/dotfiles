@@ -31,14 +31,39 @@
       gst = "git status";
     };
     plugins = [
+      { name = "z"; src = pkgs.fishPlugins.z.src; }
+      { name = "autopair"; src = pkgs.fishPlugins.autopair.src; }
+      # long queries notifier
+      { name = "done"; src = pkgs.fishPlugins.done.src; }
+      # history cleaner
+      { name = "sponge"; src = pkgs.fishPlugins.sponge.src; }
       {
-        name = "autopair";
+        name = "thefuck";
         src = pkgs.fetchFromGitHub {
-          owner = "jorgebucaran";
-          repo = "autopair.fish";
-          rev = "4d1752ff5b39819ab58d7337c69220342e9de0e2";
-          sha256 = "sha256-qt3t1iKRRNuiLWiVoiAYOu+9E7jsyECyIqZJ/oRIT1A=";
+          owner = "oh-my-fish";
+          repo = "plugin-thefuck";
+          rev = "6c9a926d045dc404a11854a645917b368f78fc4d";
+          sha256 = "sha256-9MbkyEsMsZH+3ct7qJSPvLeLRfVkDEkXRTdg/Rhe0dg";
         };
+      }
+      {
+        name = "plugin-kubectl";
+        src = pkgs.fetchFromGitHub {
+          owner = "blackjid";
+          repo = "plugin-kubectl";
+          rev = "f3cc9003077a3e2b5f45e3988817a78e959d4131";
+          sha256 = "sha256-9MbkyEsMsZH+3ct7qJSPvLeLRfVkDEkXRTdg/Rhe0dg";
+        };
+      }
+      {
+        name = "fish-docker";
+        src = pkgs.fetchFromGitHub
+          {
+            owner = "halostatue";
+            repo = "fish-docker";
+            rev = "5b8266b0e3d78db1283a01d60724a9bc10325608";
+            sha256 = "sha256-9MbkyEsMsZH+3ct7qJSPvLeLRfVkDEkXRTdg/Rhe0dg";
+          };
       }
     ];
   };
