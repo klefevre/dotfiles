@@ -36,7 +36,6 @@
     kubernetes-helm
     kubeseal
     pg_activity
-    pulumi
 
     # Nix stuff
     rnix-lsp
