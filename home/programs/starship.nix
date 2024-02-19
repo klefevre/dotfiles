@@ -9,6 +9,9 @@
       time = {
         disabled = false;
       };
+      kubernetes = {
+        disabled = false;
+      };
     };
   };
 }
