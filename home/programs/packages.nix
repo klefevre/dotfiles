@@ -26,14 +26,10 @@
     iperf
     nmap
 
-    # Rust dev
-    rustup
-
     # DevOps stuff
     awscli2
     k9s
     kubectx
-    kubernetes-helm
     kubeseal
     pg_activity
 
