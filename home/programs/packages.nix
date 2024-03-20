@@ -34,7 +34,7 @@
     pg_activity
 
     # Nix stuff
-    rnix-lsp
+    #rnix-lsp
     nixpkgs-fmt
 
     # Funny
