@@ -7,6 +7,7 @@
 
       fish_add_path ~/.cargo/bin
       fish_add_path /opt/homebrew/bin
+      fish_add_path ~/mutable_node_modules/bin
 
       function fish_greeting
         fortune -a | cowsay
