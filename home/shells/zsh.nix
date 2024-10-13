@@ -1,4 +1,3 @@
-{ pkgs, config, ... }:
 {
   programs.zsh = {
     enable = false;
@@ -13,27 +12,27 @@
       plugins = [
         {
           name = "hlissner/zsh-autopair";
-          tags = [ defer:2 ];
+          tags = ["defer:2"];
         }
         {
           name = "bigH/git-fuzzy";
-          tags = [ as:command use:bin/git-fuzzy ];
+          tags = ["as:command" "use:bin/git-fuzzy"];
         }
         {
           name = "plugins/git";
-          tags = [ from:oh-my-zsh ];
+          tags = ["from:oh-my-zsh"];
         }
         {
           name = "plugins/kubectl";
-          tags = [ from:oh-my-zsh ];
+          tags = ["from:oh-my-zsh"];
         }
         {
           name = "plugins/docker";
-          tags = [ from:oh-my-zsh ];
+          tags = ["from:oh-my-zsh"];
         }
         {
           name = "plugins/docker-compose";
-          tags = [ from:oh-my-zsh ];
+          tags = ["from:oh-my-zsh"];
         }
       ];
       # zplugHome = "${config.home.homeDirectory}/.config/zplug"; FIXME

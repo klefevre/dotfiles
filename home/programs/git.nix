@@ -1,4 +1,3 @@
-{ config, pkgs, lib, ... }:
 {
   programs.git = {
     enable = true;
@@ -19,8 +18,10 @@
       core = {
         editor = "hx";
       };
-      pull.rebase = true;
-      pull.ff = "only";
+      pull = {
+        rebase = true;
+        ff = "only";
+      };
       pager.diff = true;
       url = {
         "ssh://git@github.com/".insteadOf = "https://github.com/";

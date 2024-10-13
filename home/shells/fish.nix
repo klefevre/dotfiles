@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.fish = {
     enable = true;
     shellInit = ''
@@ -32,12 +31,24 @@
       gst = "git status";
     };
     plugins = [
-      { name = "z"; src = pkgs.fishPlugins.z.src; }
-      { name = "autopair"; src = pkgs.fishPlugins.autopair.src; }
+      {
+        name = "z";
+        src = pkgs.fishPlugins.z.src;
+      }
+      {
+        name = "autopair";
+        src = pkgs.fishPlugins.autopair.src;
+      }
       # long queries notifier
-      { name = "done"; src = pkgs.fishPlugins.done.src; }
+      {
+        name = "done";
+        src = pkgs.fishPlugins.done.src;
+      }
       # history cleaner
-      { name = "sponge"; src = pkgs.fishPlugins.sponge.src; }
+      {
+        name = "sponge";
+        src = pkgs.fishPlugins.sponge.src;
+      }
       {
         name = "thefuck";
         src = pkgs.fetchFromGitHub {
@@ -58,7 +69,8 @@
       }
       {
         name = "fish-docker";
-        src = pkgs.fetchFromGitHub
+        src =
+          pkgs.fetchFromGitHub
           {
             owner = "halostatue";
             repo = "fish-docker";
