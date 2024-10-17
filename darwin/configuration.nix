@@ -9,7 +9,9 @@
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   nix = {
+    linux-builder.enable = true;
     settings.experimental-features = "nix-command flakes";
+    settings.trusted-users = ["@admin"];
     # package = pkgs.nix;
   };
 
