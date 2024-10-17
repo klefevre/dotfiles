@@ -9,9 +9,17 @@
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   nix = {
-    linux-builder.enable = true;
-    settings.experimental-features = "nix-command flakes";
-    settings.trusted-users = ["@admin"];
+    settings = {
+      experimental-features = "nix-command flakes";
+      trusted-users = [
+        "klefevre"
+        "@admin"
+      ];
+    };
+    linux-builder = {
+      enable = true;
+      ephemeral = true;
+    };
     # package = pkgs.nix;
   };
 
@@ -31,5 +39,6 @@
 
   services = {
     nix-daemon.enable = true;
+    # openssh.enable = true;
   };
 }
