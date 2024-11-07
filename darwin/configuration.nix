@@ -28,7 +28,7 @@
 
   environment = {
     shells = [ pkgs.fish pkgs.zsh ];
-    loginShell = pkgs.fish;
+    #loginShell = pkgs.fish;
     systemPackages = [ pkgs.coreutils ];
   };
 
