@@ -19,7 +19,7 @@
       eza # better `ls` (previously lsd)
       procs # better `ps`
       ripgrep # better `grep`
-      xsv
+      xan
 
       # Networking stuff
       ipcalc
