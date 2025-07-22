@@ -40,7 +40,7 @@
       # Funny
       neofetch # fancy system and hardware info
       mdcat # Fancy cat for markdown
-      thefuck
+      pay-respects # previously thefuck
       fortune
       cowsay
     ]
