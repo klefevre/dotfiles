@@ -55,7 +55,6 @@
           owner = "blackjid";
           repo = "plugin-kubectl";
           rev = "9de10c9b3bb62fb250ad2e4cac7be12eb8efde6f";
-          sha256 = "sha256-9MbkyEsMsZH+3ct7qJSPvLeLRfVkDEkXRTdg/Rhe0dg";
         };
       }
     ];
