@@ -12,8 +12,9 @@
         fortune -a | cowsay
       end
 
+    '';
+    shellInitLast = ''
       pay-respects fish --alias | source
-
       docker completion fish | source
     '';
     shellAbbrs = {
@@ -50,6 +51,10 @@
       {
         name = "sponge";
         src = pkgs.fishPlugins.sponge.src;
+      }
+      {
+        name = "plugin-git";
+        src = pkgs.fishPlugins.plugin-git;
       }
       {
         name = "plugin-kubectl";
