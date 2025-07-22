@@ -13,6 +13,8 @@
       end
 
       pay-respects fish --alias | source
+
+      docker completion fish | source
     '';
     shellAbbrs = {
       gc = "git commit -m";
@@ -55,6 +57,7 @@
           owner = "blackjid";
           repo = "plugin-kubectl";
           rev = "9de10c9b3bb62fb250ad2e4cac7be12eb8efde6f";
+          sha256 = "sha256-nTOFIwSydgKuHUiZZdw8F7cDr9ZyyQ35M++CfP50Y5M=";
         };
       }
     ];
