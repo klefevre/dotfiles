@@ -12,7 +12,7 @@
         fortune -a | cowsay
       end
 
-      thefuck --alias | source
+      pay-respects fish --alias | source
     '';
     shellAbbrs = {
       gc = "git commit -m";
@@ -50,33 +50,13 @@
         src = pkgs.fishPlugins.sponge.src;
       }
       {
-        name = "thefuck";
-        src = pkgs.fetchFromGitHub {
-          owner = "oh-my-fish";
-          repo = "plugin-thefuck";
-          rev = "6c9a926d045dc404a11854a645917b368f78fc4d";
-          sha256 = "sha256-9MbkyEsMsZH+3ct7qJSPvLeLRfVkDEkXRTdg/Rhe0dg";
-        };
-      }
-      {
         name = "plugin-kubectl";
         src = pkgs.fetchFromGitHub {
           owner = "blackjid";
           repo = "plugin-kubectl";
-          rev = "f3cc9003077a3e2b5f45e3988817a78e959d4131";
+          rev = "9de10c9b3bb62fb250ad2e4cac7be12eb8efde6f";
           sha256 = "sha256-9MbkyEsMsZH+3ct7qJSPvLeLRfVkDEkXRTdg/Rhe0dg";
         };
-      }
-      {
-        name = "fish-docker";
-        src =
-          pkgs.fetchFromGitHub
-          {
-            owner = "halostatue";
-            repo = "fish-docker";
-            rev = "5b8266b0e3d78db1283a01d60724a9bc10325608";
-            sha256 = "sha256-9MbkyEsMsZH+3ct7qJSPvLeLRfVkDEkXRTdg/Rhe0dg";
-          };
       }
     ];
   };
