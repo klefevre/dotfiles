@@ -11,7 +11,6 @@
       function fish_greeting
         fortune -a | cowsay
       end
-
     '';
     shellInitLast = ''
       pay-respects fish --alias | source
