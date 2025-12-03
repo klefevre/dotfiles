@@ -2,18 +2,11 @@
   programs.git = {
     enable = true;
 
-    userEmail = "1300874+klefevre@users.noreply.github.com";
-    userName = "Kévin Lefèvre";
-
-    delta = {
-      enable = true;
-      options = {
-        line-numbers = true;
-        side-by-side = true;
+    settings = {
+      user = {
+        email = "1300874+klefevre@users.noreply.github.com";
+        name = "Kévin Lefèvre";
       };
-    };
-
-    extraConfig = {
       init.defaultBranch = "main";
       core = {
         editor = "hx";
@@ -47,5 +40,13 @@
       ".DocumentRevisions-V100"
       ".Trashes"
     ];
+  };
+
+  programs.delta = {
+    enable = true;
+    options = {
+      line-numbers = true;
+      side-by-side = true;
+    };
   };
 }
