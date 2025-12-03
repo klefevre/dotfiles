@@ -11,7 +11,7 @@
       # Modern tools
       bat # better `cat`
       bottom # better `top`
-      du-dust # better `du`
+      dust # better `du`
       fend # brbitrary-precision unit-aware calculator
       fd # better `find`
       fx # json viewer with folding feature
