@@ -34,7 +34,7 @@
 
   system = {
     # configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
-    stateVersion = 4;
+    stateVersion = 5;
   };
 
   services = {
