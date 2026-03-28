@@ -13,7 +13,7 @@
   };
 
   programs.direnv = {
-    enable = true;
+    #enable = true;
     # enableZshIntegration = true;
     # enableFishIntegration = true;
   };

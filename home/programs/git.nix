@@ -40,6 +40,8 @@
       ".DocumentRevisions-V100"
       ".Trashes"
     ];
+
+    signing.format = null;
   };
 
   programs.delta = {

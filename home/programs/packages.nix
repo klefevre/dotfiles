@@ -19,7 +19,7 @@
       eza # better `ls` (previously lsd)
       procs # better `ps`
       ripgrep # better `grep`
-      xan
+      xan # xsv like
 
       # Networking stuff
       ipcalc
@@ -38,7 +38,7 @@
       nixpkgs-fmt
 
       # Funny
-      neofetch # fancy system and hardware info
+      fastfetch # fancy system and hardware info
       mdcat # Fancy cat for markdown
       pay-respects # previously thefuck
       fortune
