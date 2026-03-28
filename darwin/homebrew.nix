@@ -1,13 +1,12 @@
 { pkgs, ... }:
 {
   homebrew = {
-    enable = false;
+    enable = true;
     onActivation = {
       cleanup = "zap";
       autoUpdate = true;
     };
     taps = [
-      "homebrew/cask-fonts"
     ];
     casks = [
       "bitwarden"
@@ -37,7 +36,6 @@
       "zen"
     ];
     masApps = {
-      Xcode = 497799835;
     };
     brews = [ ];
   };

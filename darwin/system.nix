@@ -3,7 +3,7 @@
   system.primaryUser = "klefevre";
 
   system.defaults.dock = {
-    orientation = "left";
+    orientation = "bottom";
   };
 
   system.defaults.loginwindow = {
