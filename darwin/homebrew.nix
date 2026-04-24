@@ -10,8 +10,8 @@
     ];
     casks = [
       "bitwarden"
+      "brave-browser"
       "caffeine"
-      "chatgpt"
       "cursor"
       "datagrip"
       "discord"
@@ -21,8 +21,6 @@
       "font-meslo-lg-nerd-font"
       "freetube"
       "iterm2"
-      "moom"
-      "nightfall"
       "obsidian"
       "opencode-desktop"
       "orbstack"
@@ -33,7 +31,6 @@
       "transmission"
       "vlc"
       "whatsapp"
-      "zen"
     ];
     masApps = {
     };
