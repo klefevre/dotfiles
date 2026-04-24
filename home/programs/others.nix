@@ -8,10 +8,6 @@
     enable = true;
   };
 
-  programs.neovim = {
-    enable = true;
-  };
-
   programs.direnv = {
     enable = true;
     #enableZshIntegration = true;
