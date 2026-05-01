@@ -8,6 +8,7 @@
       fish_add_path /opt/homebrew/bin
       fish_add_path ~/mutable_node_modules/bin
       fish_add_path ~/.local/bin
+      fish_add_path ~/.opencode/bin
 
       function fish_greeting
         fortune -a | cowsay
