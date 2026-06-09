@@ -28,9 +28,9 @@
       gd = "git diff";
       gco = "git checkout";
       gbc = "git checkout -b";
-      gcm = "git checkout master";
+      gcm = "git checkout main";
       gcd = "git checkout develop";
-      grbm = "git rebase master";
+      grbm = "git rebase main";
       grbd = "git rebase develop";
       gst = "git status";
     };
